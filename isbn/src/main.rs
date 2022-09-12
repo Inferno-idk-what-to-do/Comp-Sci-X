@@ -22,7 +22,7 @@ fn calc_check_digit(isbn: &String) -> char {
         mult -= 1;
     }
 
-    let digit= 10 - ((sum - 1) % 11);
+    let digit = 10 - ((sum - 1) % 11);
     let digit_char = "0123456789X".chars().nth(digit.try_into().unwrap()).unwrap();
 
     return digit_char;
