@@ -13,11 +13,10 @@ fn calc_check_digit(isbn: &String) -> char {
     let mut isbn_clean = String::from(isbn.replace("-", ""));
     isbn_clean.pop();
 
-    let mult = 10;
     let mut sum = 0;
 
     for i in 0..=8 {
-        sum += (mult - i) * (isbn_clean.chars().nth(i as usize).unwrap() as u32 - 0x30)
+        sum += (10 - i) * (isbn_clean.chars().nth(i as usize).unwrap() as u32 - 0x30)
     }
 
     let digit = 10 - ((sum - 1) % 11);
