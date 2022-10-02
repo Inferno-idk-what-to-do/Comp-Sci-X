@@ -15,7 +15,7 @@ fn gen_point() -> Point {
 }
 
 fn main() {
-    let point1 = gen_point();
+    let point1 = gen_point(); // wowee
     let point2 = gen_point();
 
     let distance = (calc_distance(&point1, &point2) * 100.0).round() / 100.0;
